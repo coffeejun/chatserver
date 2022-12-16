@@ -1,0 +1,53 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/lijun/chat_server/package/build/release-cpp11/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1909601241/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1909601241.dir/build.make CMakeFiles/cmTryCompileExec1909601241.dir/build
+gmake[1]: 进入目录“/home/lijun/chat_server/package/build/release-cpp11/CMakeFiles/CMakeTmp”
+/usr/bin/cmake -E cmake_progress_report /home/lijun/chat_server/package/build/release-cpp11/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1909601241.dir/CheckSymbolExists.c.o
+/opt/rh/devtoolset-9/root/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1909601241.dir/CheckSymbolExists.c.o   -c /home/lijun/chat_server/package/build/release-cpp11/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec1909601241
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1909601241.dir/link.txt --verbose=1
+/opt/rh/devtoolset-9/root/usr/bin/cc       CMakeFiles/cmTryCompileExec1909601241.dir/CheckSymbolExists.c.o  -o cmTryCompileExec1909601241 -rdynamic 
+/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/ld: CMakeFiles/cmTryCompileExec1909601241.dir/CheckSymbolExists.c.o: in function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+gmake[1]: 离开目录“/home/lijun/chat_server/package/build/release-cpp11/CMakeFiles/CMakeTmp”
+gmake[1]: *** [cmTryCompileExec1909601241] 错误 1
+gmake: *** [cmTryCompileExec1909601241/fast] 错误 2
+
+File /home/lijun/chat_server/package/build/release-cpp11/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/lijun/chat_server/package/build/release-cpp11/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1541620593/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1541620593.dir/build.make CMakeFiles/cmTryCompileExec1541620593.dir/build
+gmake[1]: 进入目录“/home/lijun/chat_server/package/build/release-cpp11/CMakeFiles/CMakeTmp”
+/usr/bin/cmake -E cmake_progress_report /home/lijun/chat_server/package/build/release-cpp11/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1541620593.dir/CheckFunctionExists.c.o
+/opt/rh/devtoolset-9/root/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec1541620593.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1541620593
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1541620593.dir/link.txt --verbose=1
+/opt/rh/devtoolset-9/root/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec1541620593.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1541620593 -rdynamic -lpthreads 
+/opt/rh/devtoolset-9/root/usr/libexec/gcc/x86_64-redhat-linux/9/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+gmake[1]: 离开目录“/home/lijun/chat_server/package/build/release-cpp11/CMakeFiles/CMakeTmp”
+gmake[1]: *** [cmTryCompileExec1541620593] 错误 1
+gmake: *** [cmTryCompileExec1541620593/fast] 错误 2
+
+

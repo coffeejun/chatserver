@@ -1,0 +1,3 @@
+/home/lijun/chat_server/testmuduo/CMakeFiles/rebuild_cache.dir
+/home/lijun/chat_server/testmuduo/CMakeFiles/edit_cache.dir
+/home/lijun/chat_server/testmuduo/CMakeFiles/server.dir
